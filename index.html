@@ -32,7 +32,10 @@
         TRACK YOUR SLP GAIN FOR THE DAY <br/>
         OR <br/>
         TRACK YOUR ENEMY ENERGY
-        <h4>used for in-lay browser for streaming</h4>
+        <h4>Used for in-lay browser for streaming, Crop the blue BG use chroma key to remove BG</h4>
+        <h4>Open another browser and use the control panel</h4>
+        <p style="color:red;font-size:12px;">Note: no SSL/Cloudfront,  Hosted in AWS S3, domain in Route 53, plain vanilla JS and HTML </p>
+        <h4><a href="https://www.w3schools.com">Check Repository</a> </h4>
 
     </div>
     <!--SLP TRACKER  -->
@@ -54,23 +57,23 @@
             </div>
             </div>
         <div  class="row"  style="text-align:center;margin-top:150px;">
-            <button id="6slp" onclick="changeValue(6)" type="button" class="btn-xs btn-success" value="6">6</button>
-            <button id="9slp" onclick="changeValue(9)" type="button" class="btn-xs btn-success" value="9">9</button>
-            <button id="12slp" onclick="changeValue(12)"  type="button" class="btn-xs btn-success" value="12">12</button>
-            <button id="15slp" onclick="changeValue(15)" type="button" class="btn-xs btn-success" value="15">15</button>
-            <button id="18slp" onclick="changeValue(18)" type="button" class="btn-xs btn-success" value="18">18</button>
-            <button id="21slp" onclick="changeValue(21)" type="button" class="btn-xs btn-success" value="21">21</button>
-            <button id="50slp" onclick="changeValue(50)" type="button" class="btn-xs btn-warning" value="15">50</button>
-            <button id="lose" onclick="addLose()"  type="button" class="btn-xs btn-danger">L</button>
-            <button id="lose" onclick="addDraw()" style="background-color:rgb(175, 175, 175);" type="button" class="btn-xs btn-success">D</button>
-            <button id="lose" onclick="refreshValue()" style="background-color:rgb(41, 206, 0);" type="button" class="btn-xs btn-success"><i class="fa fa-refresh"></i></button>
+            <button id="6slp" onclick="changeValue(6)" type="button" class="btn-lg btn-success" value="6">6</button>
+            <button id="9slp" onclick="changeValue(9)" type="button" class="btn-lg btn-success" value="9">9</button>
+            <button id="12slp" onclick="changeValue(12)"  type="button" class="btn-lg btn-success" value="12">12</button>
+            <button id="15slp" onclick="changeValue(15)" type="button" class="btn-lg btn-success" value="15">15</button>
+            <button id="18slp" onclick="changeValue(18)" type="button" class="btn-lg btn-success" value="18">18</button>
+            <button id="21slp" onclick="changeValue(21)" type="button" class="btn-lg btn-success" value="21">21</button>
+            <button id="50slp" onclick="changeValue(50)" type="button" class="btn-lg btn-warning" value="15">50</button>
+            <button id="lose" onclick="addLose()"  type="button" class="btn-lg btn-danger">L</button>
+            <button id="lose" onclick="addDraw()" style="background-color:rgb(175, 175, 175);" type="button" class="btn-lg btn-success">D</button>
+            <button id="lose" onclick="refreshValue()" style="background-color:rgb(41, 206, 0);" type="button" class="btn-lg btn-success"><i class="fa fa-refresh"></i></button>
         
         </div>
         <div class="row"  style="text-align:center;margin-top:10px;">
-            <input  id="inputDraw" class="form-control" style="width:50px; height:20px;   position: relative;
+            <input  id="inputDraw" class="form-control" style="margin-bottom:5px;width:90px; height:30px;   position: relative;
             display: block;
             margin : 0 auto; -webkit-appearance: none; " type="number">
-            <button id="6slp" onclick="addDraw()" style="background-color:rgb(175, 175, 175);" type="button" class="btn-xs btn-success">SLP DRAW</button>
+            <button id="6slp" onclick="addDraw()" style="background-color:rgb(175, 175, 175);margin-top:5px;" type="button" class="btn-lg btn-success">SLP DRAW</button>
         </div>
     </div>
     <!--ENERGY TRACKER  -->
@@ -78,7 +81,7 @@
         <div  class="row">
             <div style="text-align:center;"> 
                 <img src="https://1001freedownloads.s3.amazonaws.com/icon/thumb/377921/Dragon-Ball-icon.png" alt="SLP" width="43px" height="43px" style="margin-bottom:7px;">
-                <span id="energyTotal" style="color:red;font-size:36px;">3</span>
+                <span id="energyTotal" style="color:red;font-size:36px;">UNDER CONSTRUCTION</span>
             </div>
 
         </div>
@@ -93,9 +96,9 @@
 
         </div>
         <div  class="row"   style="text-align:center;margin-top:-50px;z-index: 999;">
-            <button id="1roundSteal" type="button" class="btn-xs btn-danger" value="18">1</button>
-            <button id="2roundSteal" type="button" class="btn-xs btn-danger" value="12">2</button>
-            <button id="3roundSteal" type="button" class="btn-xs btn-danger" value="15">3</button>
+            <button id="1roundSteal" type="button" class="btn-sm btn-danger" value="18">1</button>
+            <button id="2roundSteal" type="button" class="btn-sm btn-danger" value="12">2</button>
+            <button id="3roundSteal" type="button" class="btn-sm btn-danger" value="15">3</button>
         </div>
     <!--USED ENERGY-->      
         <div  class="row" style="margin-top:30px;">
@@ -103,9 +106,9 @@
 
         </div>
         <div  class="row"   style="text-align:center;margin-top:-50px;z-index: 999;">
-            <button id="1roundUsed" type="button" class="btn-xs btn-danger" value="18">1</button>
-            <button id="1roundGain" type="button" class="btn-xs btn-danger" value="12">2</button>
-            <button id="1roundGain" type="button" class="btn-xs btn-danger" value="15">3</button>
+            <button id="1roundUsed" type="button" class="btn-sm btn-danger" value="18">1</button>
+            <button id="1roundGain" type="button" class="btn-sm btn-danger" value="12">2</button>
+            <button id="1roundGain" type="button" class="btn-sm btn-danger" value="15">3</button>
         </div>
        
         
@@ -201,6 +204,7 @@
 
             localStorage.setItem("drawCount", drawAdd);
             var drawCount = localStorage.getItem("drawCount");
+            localStorage.setItem("slpGain", final_value);
 
             document.getElementById("slpTotal").innerHTML = final_value;
             document.getElementById("drawCount").innerHTML =  drawCount;
