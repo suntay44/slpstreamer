@@ -1,5 +1,6 @@
-# slpstreamer
+# About
 slp streamer for in-lay slp count and energy in stream setup
+FREE of CHARGE just love to Amethaverse.io is enough <3 
 
 # technicalities
 
